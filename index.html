@@ -1,8 +1,31 @@
-<!-- index.html -->
-<form id="search-form">
-  <input type="text" id="q" placeholder="Search Trump videos…" required>
-  <button>Go</button>
-</form>
-<ul id="results"></ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trump Video Search</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    h1 { text-align: center; }
+    #searchForm { margin-bottom: 1rem; display: flex; justify-content: center; }
+    #searchForm input { width: 300px; padding: .5rem; font-size: 1rem; }
+    #searchForm button { margin-left: .5rem; padding: .5rem 1rem; font-size: 1rem; }
+    #results { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .video { border: 1px solid #ddd; padding: .5rem; border-radius: 4px; }
+    .video img { width: 100%; height: auto; border-radius: 4px; }
+    .video h3 { font-size: 1rem; margin: .5rem 0; }
+    .video a { color: #0066cc; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>Trump Video Search</h1>
 
-<script src="app.js"></script>
+  <form id="searchForm">
+    <input type="text" id="query" placeholder="Search for Trump videos…" required />
+    <button type="submit">Search</button>
+  </form>
+
+  <div id="results"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
